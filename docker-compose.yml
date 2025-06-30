@@ -10,6 +10,7 @@ services:
     depends_on:
       - app1
       - app2
+      - app3
 
   app1:
     image: httpd:alpine
@@ -20,3 +21,8 @@ services:
     image: httpd:alpine
     volumes:
       - ./app2:/usr/local/apache2/htdocs/
+
+  app3:
+    image: httpd:alpine
+    volumes:
+      - ./app3:/usr/local/apache2/htdocs/
